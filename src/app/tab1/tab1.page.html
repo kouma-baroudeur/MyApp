@@ -5,7 +5,6 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
@@ -13,5 +12,19 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+ <!-- <app-explore-container name="Tab 1 page">
+
+  </app-explore-container>-->
+   <ion-content>
+     <span id="nom" class="ion-color-primary">Titre primary</span>
+     <ion-item>
+       <ion-label position="floating">Date de naissance</ion-label>
+       <ion-input type="number" [(ngModel)]="age"></ion-input>
+     </ion-item>
+     <ion-item>
+     <ion-badge *ngIf="age<18" slot="start">mineur</ion-badge>
+     <ion-label>My Item {{age}}</ion-label>
+     <ion-badge *ngIf="age>17" slot="end">majeur</ion-badge>
+     </ion-item>
+   </ion-content>
 </ion-content>
