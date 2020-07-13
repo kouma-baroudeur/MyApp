@@ -21,8 +21,12 @@ const routes: Routes = [
         loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
       },
       {
+        path: 'welcome',
+        loadChildren: () => import('../welcome/welcome.module').then(m => m.WelcomePageModule)
+      },
+      {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/welcome',
         pathMatch: 'full'
       }
     ]
